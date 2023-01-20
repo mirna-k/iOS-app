@@ -13,11 +13,12 @@ struct ContentView: View {
     @State var isSignedIn = true
     let columnLayout = Array(repeating: GridItem(), count: 2)
     @State private var selectedText = ""
+    @EnvironmentObject var eventData: EventData
 
     let gridItems: [String] = [
         "Images",
+        "Event planer",
         "Notes",
-        "Events",
         "Friends"
     ]
     
@@ -48,16 +49,11 @@ struct ContentView: View {
                             }
                             
                         }.buttonStyle(.plain)
-                        
                     }
                 }
-                
             }
-            
             .padding()
         }
-        
- 
     }
 }
 
